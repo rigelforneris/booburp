@@ -4,7 +4,7 @@ A burp plugin to parse a request and transforms in a boofuzz python script!
 
 Instructions:
 
-Download jython standalone: https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.3/jython-standalone-2.7.3.jar
+There is a file called jython-standalone-2.7.3.jar located in root directory of this project, this is Jython, a python enviroment for java, copy to a place of your choose.
 
 On burp, in extentions tab, go to "extention settings", in python enviroment, put the location of jython in "location of jython standalone JAR file".
 
