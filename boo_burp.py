@@ -167,7 +167,7 @@ from boofuzz import *
 
 def main():
     session = Session(
-        target=Target(connection=TCPSocketConnection("juiceshop.testzone", 80)),
+        target=Target(connection=TCPSocketConnection(\"'''+host+'''\", 80)),
     )
 
     s_initialize(name="Request")
