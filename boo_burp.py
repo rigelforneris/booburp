@@ -105,7 +105,7 @@ class BurpExtender(IBurpExtender,IContextMenuFactory,JFrame):
                 #list_line="\""+static_part+"\": \""+string_part+"\""
                 list_line={static_part : string_part}
                 
-                print(type(list_line))
+                #print(type(list_line))
                
                 header_export.update(list_line)
            
@@ -154,17 +154,8 @@ class BurpExtender(IBurpExtender,IContextMenuFactory,JFrame):
             
 
     def autofuzz(self,event):
-        self.traffic_data(event)
-        content=self.parser(event)
-        print(content)
-        #url = "http://192.168.1.10:8000/autofuzz_gather?usecase=asdasd"
-        url = "http://192.168.1.10:8000/autofuzz_gather?headers="+str(header_export)+"&method="+str(method)+"&uri="+str(uri)+"&host="+str(host)+"&body="+str(body_test)
-        request_headers = {"accept": "application/json"}
-        data = ""
-        response = requests.post(url, headers=request_headers, data=data)
 
-        #print(response.status_code)
-        print(response.text)
+        print("Function not available, yet!")
 
     #Parse the traffic
     def parser(self,event):
@@ -228,7 +219,7 @@ def main():
                 body_string_part = body_parsed.group('string')
 
                 content +="        s_static(\'"+body_static_part+"\')" + "\n"
-                content +="        s_string(\'"+body_string_part+"\')" + "\n"
+                content +="        s_string(\'string_data\')" + "\n"
             
         except:
             content = content.replace('with s_block("Body-Content"):', '')
